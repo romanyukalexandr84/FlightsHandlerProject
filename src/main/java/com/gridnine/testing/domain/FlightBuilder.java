@@ -6,7 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FlightBuilder {
-    private static List<Flight> createFlights() {
+    //метод создания списка из шести образцов перелетов
+    public static List<Flight> createFlights() {
         LocalDateTime threeDaysFromNow = LocalDateTime.now().plusDays(3);
         return Arrays.asList(
                 //A normal flight with two hour duration
@@ -27,6 +28,7 @@ public class FlightBuilder {
                         threeDaysFromNow.plusHours(6), threeDaysFromNow.plusHours(7)));
     }
 
+    //метод создания перелета
     private static Flight createFlight(final LocalDateTime... dates) {
         if ((dates.length % 2) != 0) {
             throw new IllegalArgumentException(
