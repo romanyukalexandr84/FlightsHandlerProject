@@ -2,7 +2,6 @@ package com.gridnine.testing.handlers;
 
 import com.gridnine.testing.domain.Flight;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class FilterForIncorrectDate implements Handler {

@@ -5,9 +5,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Segment {
-    private final LocalDateTime departureDate;
+    private LocalDateTime departureDate;
 
-    private final LocalDateTime arrivalDate;
+    private LocalDateTime arrivalDate;
 
     Segment(final LocalDateTime dep, final LocalDateTime arr) {
         departureDate = Objects.requireNonNull(dep);
@@ -20,6 +20,14 @@ public class Segment {
 
     public LocalDateTime getArrivalDate() {
         return arrivalDate;
+    }
+
+    public void setDepartureDate(LocalDateTime departureDate) {
+        this.departureDate = departureDate;
+    }
+
+    public void setArrivalDate(LocalDateTime arrivalDate) {
+        this.arrivalDate = arrivalDate;
     }
 
     @Override
